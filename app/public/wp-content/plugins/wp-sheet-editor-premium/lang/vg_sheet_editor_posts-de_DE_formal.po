@@ -1,0 +1,368 @@
+# Copyright (C) 2020 WP Sheet Editor
+# This file is distributed under the same license as the WP Sheet Editor plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Sheet Editor 2.21.2.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/posts-pages-"
+"products-sheet\n"
+"Language-Team: Hanno Bolte IT Consulting <info@bsoft.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-10-20T18:04:36+00:00\n"
+"PO-Revision-Date: 2020-11-17 15:21+0100\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: Hanno Bolte <xlate@bsoft.de>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE@formal\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+msgid "WP Sheet Editor"
+msgstr "WP Sheet Editor"
+
+#. Plugin URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/extensions/posts-pages-post-types-spreadsheet/?"
+"utm_source=wp-admin&utm_medium=plugins-list&utm_campaign=posts"
+msgstr ""
+"https://wpsheeteditor.com/extensions/posts-pages-post-types-spreadsheet/?"
+"utm_source=wp-admin&utm_medium=plugins-list&utm_campaign=posts"
+
+#. Description of the plugin
+msgid ""
+"Bulk edit posts and pages easily using a beautiful spreadsheet inside "
+"WordPress."
+msgstr ""
+"Massenweise Beiträge und Seiten mit Hilfe eines schönen Arbeitsblatts "
+"innerhalb von WordPress einfach bearbeiten."
+
+#. Author URI of the plugin
+msgid ""
+"https://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-"
+"list&utm_campaign=posts"
+msgstr ""
+"https://wpsheeteditor.com/?utm_source=wp-admin&utm_medium=plugins-"
+"list&utm_campaign=posts"
+
+#: whats-new/1.2.0.php:4
+msgid ""
+"<p>New feature: Now you can add custom columns to the spreadsheet easily. "
+"This way you can edit custom fields or fields added by plugins. <a href="
+"\"https://youtu.be/fxzVgzjhdR0\" target=\"_blank\">View quick tutorial (2 "
+"minutes)</a></p>"
+msgstr ""
+"<p>Neue Funktion: Jetzt können Sie dem Arbeitsblatt problemlos "
+"benutzerdefinierte Spalten hinzufügen. Auf diese Weise können Sie "
+"benutzerdefinierte oder von Plugins hinzugefügte Felder bearbeiten. <a href="
+"\"https://youtu.be/fxzVgzjhdR0\" target=\"_blank\">Schnelles Tutorial "
+"anzeigen (2 Minuten)</a></p>"
+
+#: whats-new/1.2.0.php:5
+msgid ""
+"<p>New feature: Added WordPress Multisite compatibility. Now you add the "
+"license once and the license works with the entire network. Each site has "
+"different settings. </p>"
+msgstr ""
+"<p>Neue Funktion: Kompatibilität mit WordPress Multisite hinzugefügt. Jetzt "
+"fügen Sie die Lizenz einmal hinzu und die Lizenz funktioniert mit dem "
+"gesamten Netzwerk. Jede Site hat unterschiedliche Einstellungen </p>"
+
+#: whats-new/1.2.0.php:6
+msgid ""
+"<p>New feature: Added WPBakery Page Builder compatibility. Now you can edit "
+"the post content using the Live editor, Backend editor, or Normal editor. </"
+"p>"
+msgstr ""
+"<p>Neue Funktion: Kompatibilität mit WPBakery Page Builder hinzugefügt. "
+"Jetzt können Sie den Beitragsinhalt mit dem Live-Editor, Backend-Editor oder "
+"dem normalen Editor bearbeiten.</p>"
+
+#: whats-new/1.2.0.php:7
+msgid ""
+"<p>New feature: Added Advanced Custom Fields compatibility. Now you can edit "
+"in the spreadsheet the fields from your custom metaboxes. At the moment it "
+"works with basic fields: text, textarea, tinymce, image. </p>"
+msgstr ""
+"<p>Neue Funktion: Kompatibilität mit Advanced Custom Fields hinzugefügt. "
+"Jetzt können Sie im Arbeitsblatt die Felder aus Ihren benutzerdefinierten "
+"Metaboxen bearbeiten. Im Moment ist dies möglich mit den Feldarten: Text, "
+"Textarea, Tinymce, Bild </p>"
+
+#: whats-new/1.3.0.php:4
+msgid ""
+"<p>New feature: WooCommerce - Added columns: \"allow backorders\", \"is "
+"featured\", \"manage stock\", \"stock quantity\".</p>"
+msgstr ""
+"<p>Neue Funktion: WooCommerce - Spalten hinzugefügt: \"Bestellrückstände "
+"zulassen\", \"ist empfohlen\", \"Lagerbestand verwalten\", \"Lagermenge\".</"
+"p>"
+
+#: whats-new/1.3.0.php:5
+msgid ""
+"<p>New feature: Filters - Now you can search / display posts that contain a "
+"specific keyword in the title or content. For example, display on the "
+"spreadsheet the posts that mention the keyword: \"Awesome\". </p>"
+msgstr ""
+"<p>Neue Funktion: Filter - Jetzt können Sie Beiträge suchen / anzeigen, die "
+"ein bestimmtes Schlüsselwort im Titel oder Inhalt enthalten. Zeigen Sie z. "
+"B. im Arbeitsblatt die Beiträge an, in denen das Schlüsselwort \"Awesome\" "
+"erwähnt wird. </p>"
+
+#: whats-new/1.3.0.php:6
+msgid ""
+"<p>New feature: Columns visibility - Now you can sort the columns on the "
+"settings page per post type.</p>"
+msgstr ""
+"<p>Neue Funktion: Sichtbarkeit der Spalten - Jetzt können Sie die Spalten "
+"auf der Einstellungsseite nach Beitragstyp sortieren.</p>"
+
+#: whats-new/1.4.0.php:4
+msgid ""
+"<p>New feature: WooCommerce - Added support for \"variable\" products and "
+"all their fields.</p>"
+msgstr ""
+"<p>Neue Funktion: WooCommerce - Unterstützung für \"variable\" Produkte und "
+"alle ihre Felder hinzugefügt.</p>"
+
+#: whats-new/1.4.0.php:5
+msgid ""
+"<p>New feature: WooCommerce - Added support for \"downloadable\" products "
+"and all their fields.</p>"
+msgstr ""
+"<p>Neue Funktion: WooCommerce - Unterstützung für \"herunterladbare\" "
+"Produkte und alle ihre Felder hinzugefügt.</p>"
+
+#: whats-new/1.4.0.php:6
+msgid ""
+"<p>New feature: WooCommerce - Added \"Edit Attributes\" column for editing/"
+"creating custom and global attributes.</p>"
+msgstr ""
+"<p>Neue Funktion: WooCommerce - Spalte \"Attribute bearbeiten\" zum "
+"Bearbeiten/Erstellen von benutzerdefinierten und globalen Attributen "
+"hinzugefügt.</p>"
+
+#: whats-new/1.4.0.php:7
+msgid "<p>New feature: WooCommerce - Added \"shipping_class\" column.</p>"
+msgstr ""
+"<p>Neue Funktion: WooCommerce - Spalte \"Versandklasse\" hinzugefügt.</p>"
+
+#: whats-new/1.4.0.php:8
+msgid "<p>New feature: Formulas - Allow wildcards in REPLACE formula.</p>"
+msgstr ""
+"<p>Neue Funktion: Formeln - Platzhalter in der REPLACE-Formel sind möglich.</"
+"p>"
+
+#: whats-new/1.4.0.php:9
+msgid ""
+"<p>New feature: Formulas - You can search and replace, or save images using "
+"URLs.</p>"
+msgstr ""
+"<p>Neue Funktion: Formeln - Sie können Bilder über URLs suchen und ersetzen "
+"oder speichern.</p>"
+
+#: whats-new/1.4.0.php:10
+msgid ""
+"<p>New feature: Formulas - Added formulas builder to create formulas easily."
+"</p>"
+msgstr ""
+"<p>Neue Funktion: Formeln - Formeleditor zur einfachen Erstellung von "
+"Formeln hinzugefügt.</p>"
+
+#: whats-new/1.4.0.php:11
+msgid ""
+"<p>New feature: Columns visibility - Added option to sort and hide columns "
+"live in the spreadsheet.</p>"
+msgstr ""
+"<p>Neue Funktion: Sichtbarkeit von Spalten - Option zum Sortieren und "
+"Ausblenden von Spalten direkt im Arbeitsblatt hinzugefügt.</p>"
+
+#: whats-new/2.0.0.php:4
+msgid ""
+"<p>NEW - WooCommerce - Allow to clone variations from one product to other "
+"products</p>"
+msgstr ""
+"<p>NEU - WooCommerce - Das Klonen von Varianten von einem Produkt auf andere "
+"Produkte ist möglich</p>"
+
+#: whats-new/2.0.0.php:5
+msgid ""
+"<p>NEW - WooCommerce - Create variation - Allow to create variations for "
+"multiple products at once.</p>"
+msgstr ""
+"<p>NEU - WooCommerce - Variante erstellen - Die gleichzeitige Erstellung von "
+"Varianten für mehrere Produkte ist möglich.</p>"
+
+#: whats-new/2.0.0.php:6
+msgid ""
+"<p>NEW - WooCommerce - allow to copy downloadable files from other product "
+"in popup</p>"
+msgstr ""
+"<p>NEU - WooCommerce - Das Kopieren herunterladbarer Dateien von anderen "
+"Produkten im Popup ist möglich</p>"
+
+#: whats-new/2.0.0.php:7
+msgid ""
+"<p>NEW - FORMULAS - Allow to execute formula only on WooCommerce variations."
+"</p>"
+msgstr ""
+"<p>NEU - FORMELN - Ausführung von Formeln nur bei WooCommerce-Varianten "
+"ermöglichen.</p>"
+
+#: whats-new/2.0.0.php:8
+msgid ""
+"<p>NEW - CUSTOM COLUMNS - Added settings page button in the toolbar for "
+"quick access.</p>"
+msgstr ""
+"<p>NEU - BENUTZERDEFINIERTE SPALTEN - Schaltfläche zur Einstellungsseite in "
+"der Symbolleiste für schnellen Zugriff hinzugefügt.</p>"
+
+#: whats-new/2.0.0.php:9
+msgid ""
+"<p>NEW - FORMULAS - Added option for executing custom formula on any field "
+"type.</p>"
+msgstr ""
+"<p>NEU - FORMELN - Option zum Ausführen benutzerdefinierter Formeln bei "
+"jedem Feldtyp hinzugefügt.</p>"
+
+#: whats-new/2.0.0.php:10
+msgid ""
+"<p>NEW - PRO - Added set up wizard for post types that allows you to set up "
+"a post type and custom columns quickly.</p>"
+msgstr ""
+"<p>NEU - PRO - Einrichtungsassistent für Beitragsarten hinzugefügt, mit dem "
+"Sie eine Beitragsart und benutzerdefinierte Spalten schnell einrichten "
+"können.</p>"
+
+#: whats-new/2.0.0.php:11
+msgid ""
+"<p>NEW - FORMULAS - improved the speed of simple formulas allowing to update "
+"thousands of posts in just a few seconds. Huge speed improvement.</p>"
+msgstr ""
+"<p>NEU - FORMELN - Die Geschwindigkeit einfacher Formeln wurde verbessert, "
+"die es ermöglicht, Tausende von Beiträgen in wenigen Sekunden zu "
+"aktualisieren. Enorme Geschwindigkeitsverbesserung.</p>"
+
+#: whats-new/2.0.0.php:12
+msgid ""
+"<p>NEW - PRO - Added option to create new spreadsheets for new post types.</"
+"p>"
+msgstr ""
+"<p>NEU - PRO - Option zum Erstellen neuer Arbeitsblätter für neue "
+"Beitragsarten hinzugefügt.</p>"
+
+#: whats-new/2.0.0.php:13
+msgid ""
+"<p>NEW - FILTERS - Added advanced meta filters with operators like =, !=, <, "
+">, LIKE, etc.</p>"
+msgstr ""
+"<p>NEU - FILTER - Erweiterte Metafilter mit Operatoren wie =, !=, <, >, "
+"LIKE, usw. hinzugefügt</p>"
+
+#: whats-new/2.0.0.php:14
+msgid "<p>FIX - WooCommerce - Variation titles appear empty.</p>"
+msgstr "<p>FIX - WooCommerce - Variantentitel erscheinen leer.</p>"
+
+#: whats-new/2.0.0.php:15
+msgid "<p>FIX - FORMULAS - Sometimes it doesn´t update the last posts.</p>"
+msgstr ""
+"<p>FIX - FORMELN - Manchmal werden die letzten Beiträge nicht aktualisiert.</"
+"p>"
+
+#: whats-new/2.0.0.php:16
+msgid ""
+"<p>FIX - FORMULAS - Sometimes when searching post terms while preparing "
+"formula, it doesn´t find any.</p>"
+msgstr ""
+"<p>FIX - FORMELN - Manchmal werden bei der Suche nach Beitrags-Begriffen "
+"während der Vorbereitung von Formeln keine gefunden.</p>"
+
+#: whats-new/2.0.0.php:17
+msgid ""
+"<p>FIX - CUSTOM POST TYPES - It doesn´t allow post types created after the "
+"settings page is registered, ignoring post types added by \"types\" plugin.</"
+"p>"
+msgstr ""
+"<p>FIX - BENUTZERDEFINIERTE BEITRAGSTYPEN - Beitragstypen, die nach der "
+"Registrierung der Einstellungsseite erstellt wurden, sind nicht erlaubt, "
+"Beitragstypen, die durch das \"types\"-Plugin hinzugefügt wurden, werden "
+"ignoriert.</p>"
+
+#: whats-new/2.0.0.php:18
+msgid "<p>FIX - FORMULAS - It doesn´t accept decimal numbers.</p>"
+msgstr "<p>FIX - FORMELN - Es werden keine Dezimalzahlen akzeptiert.</p>"
+
+#: whats-new/2.0.0.php:19
+msgid ""
+"<p>FIX - CUSTOM COLUMNS - It doesn´t allow to remove the first column.</p>"
+msgstr ""
+"<p>FIX - BENUTZERDEFINIERTE SPALTEN - Es ist nicht möglich, die erste Spalte "
+"zu entfernen.</p>"
+
+#: whats-new/2.0.0.php:20
+msgid ""
+"<p>FIX - WooCommerce - When editing attributes it marks \"visible\" and \"is "
+"taxonomy\" as true ignoring the set value.</p>"
+msgstr ""
+"<p>FIX - WooCommerce - Bei der Bearbeitung von Attributen werden \"sichtbar"
+"\" und \"ist Taxonomie\" als wahr gekennzeichnet und der definierte Wert "
+"ignoriert.</p>"
+
+#: whats-new/2.0.0.php:21
+msgid ""
+"<p>FIX - FORMULAS - it doesn´t allow to replace something with nothing "
+"(remove a value).</p>"
+msgstr ""
+"<p>FIX - FORMELN - Es ist nicht möglich, etwas durch nichts zu ersetzen "
+"(einen Wert zu entfernen).</p>"
+
+#: whats-new/2.0.0.php:22
+msgid ""
+"<p>FIX - FORMULAS - File columns dont save files when using url with query "
+"strings</p>"
+msgstr ""
+"<p>FIX - FORMELN - Datei-Spalten speichern keine Dateien, wenn die URL mit "
+"Abfrage-Strings verwendet wird</p>"
+
+#: whats-new/2.0.0.php:23
+msgid ""
+"<p>FIX - WooCommerce - download files popup doesn´t show previously edited "
+"values</p>"
+msgstr ""
+"<p>FIX - WooCommerce - Popup-Fenster zum Herunterladen von Dateien zeigt "
+"zuvor bearbeitete Werte nicht an</p>"
+
+#: whats-new/2.0.0.php:24
+msgid "<p>FIX - COLUMNS VISIBILITY - Drag and drop is not working on popup</p>"
+msgstr ""
+"<p>FIX - SICHTBARKEIT VON SPALTEN - Drag &amp; Drop funktioniert nicht bei "
+"Popup</p>"
+
+#: whats-new/2.0.0.php:25
+msgid ""
+"<p>FIX - FORMULAS - Wrong formula generated for \"decrease by %\" option.</p>"
+msgstr ""
+"<p>FIX - FORMELN - Falsche Formel für die Option \"Abnahme um %\" generiert."
+"</p>"
+
+#: whats-new/2.1.0.php:4
+msgid ""
+"<p>NEW - WOOCOMMERCE - Now we calculate the total inventory units and total "
+"inventory price of all the products in the spreadsheet and display it in the "
+"status bar.</p>"
+msgstr ""
+"<p>NEU - WOOCOMMERCE - Jetzt berechnen wir die Gesamtbestandseinheiten und "
+"den Gesamtbestandspreis aller Produkte im Arbeitsblatt und zeigen sie in der "
+"Statusleiste an.</p>"
+
+#: wp-sheet-editor.php:72
+msgid ""
+"Please update the WP Sheet Editor plugin and all its extensions to the "
+"latest version. The features of the plugin \""
+msgstr ""
+"Bitte aktualisieren Sie das WP Sheet Editor Plugin und alle seine "
+"Erweiterungen auf die neueste Version. Die Eigenschaften des Plugins \""
+
+#: wp-sheet-editor.php:145
+msgid "My license"
+msgstr "Meine Lizenz"

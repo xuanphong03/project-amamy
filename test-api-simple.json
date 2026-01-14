@@ -1,0 +1,33 @@
+{
+  "ho_ten": "Nguyễn Văn A",
+  "so_dien_thoai": "0912345678",
+  "email": "nguyenvana@example.com",
+  "ma_khach_hang": "KH001",
+  "dia_chi_lay_hang": "123 Đường Láng, Phường Láng Thượng",
+  "ten_thanh_pho": "Hà Nội",
+  "ma_thanh_pho": "HN",
+  "ten_duong": "Đường Láng",
+  "so_nha": "123",
+  "phuong_thuc_lay_hang": "use_pickup",
+  "thoi_gian_lay_hang": "2025-01-20 14:00",
+  "danh_sach_kien_hang": [
+    {
+      "can_nang": "2.5"
+    },
+    {
+      "can_nang": "1.8"
+    },
+    {
+      "can_nang": "3.2"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+/**
+ * Admin styles for Delivery Order System
+ */
+
+.delivery-order-system-admin {
+    max-width: 1200px;
+}
+
+.delivery-order-system-admin .form-table th {
+    width: 200px;
+}
+
+.delivery-order-system-admin .form-table td {
+    padding: 15px 10px;
+}
+
+.delivery-order-system-admin .description {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Delivery manager cards */
+.delivery-manager-cards {
+    margin-top: 20px;
+    display: grid;
+    gap: 16px;
+}
+
+.delivery-manager-heading {
+    margin: 0;
+}
+
+.delivery-manager-empty {
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.delivery-manager-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.delivery-manager-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.delivery-manager-date {
+    margin-left: auto;
+    margin-right: 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+.delivery-manager-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+}
+
+.delivery-manager-fees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.delivery-manager-fees label span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.delivery-manager-fees label input {
+    width: 100%;
+}

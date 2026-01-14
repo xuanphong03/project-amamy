@@ -1,0 +1,83 @@
+.delivery-manager-table {
+    margin-top: 15px;
+}
+
+.delivery-manager-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    padding: 12px 8px;
+    text-align: center;
+}
+
+.delivery-manager-table td {
+    padding: 8px;
+    vertical-align: top;
+}
+
+.delivery-manager-table .facebook-info {
+}
+
+.delivery-manager-table .facebook-info div {
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.delivery-manager-table .facebook-info small {
+    color: #666;
+    font-size: 11px;
+}
+
+.delivery-manager-table td:nth-child(1) {
+    width: 150px;
+}
+
+.delivery-manager-table td:nth-child(2) {
+    width: 100px;
+}
+
+.delivery-manager-table td:nth-child(3) {
+    width: 120px;
+}
+
+.delivery-manager-table td:nth-child(4),
+.delivery-manager-table td:nth-child(5),
+.delivery-manager-table td:nth-child(6),
+.delivery-manager-table td:nth-child(7),
+.delivery-manager-table td:nth-child(8),
+.delivery-manager-table td:nth-child(9) {
+    width: 120px;
+}
+
+.delivery-manager-table td:nth-child(10),
+.delivery-manager-table td:nth-child(11),
+.delivery-manager-table td:nth-child(12) {
+    width: 100px;
+}
+
+.delivery-manager-table td:last-child {
+    width: 80px;
+    text-align: center;
+}
+
+.delivery-manager-table input[type="text"],
+.delivery-manager-table input[type="number"] {
+    width: 100%;
+    min-width: 60px;
+}
+
+.delivery-manager-table div[title] {
+    position: relative;
+}
+.delivery-manager-download-pdf,
+.delivery-manager-send-mail,
+.delivery-manager-remove-row {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.delivery-manager-actions-cell {
+    width: 150px;
+}
+.delivery-manager-actions {
+}

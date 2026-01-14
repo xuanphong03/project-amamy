@@ -1,0 +1,12 @@
+{
+    "require": {
+        "mpdf/mpdf": "^8.0",
+        "phpoffice/phpspreadsheet": "^1.29"
+    },
+    "autoload": {
+        "psr-4": {
+            "DeliveryOrderSystem\\Payment\\": "includes/Payment/",
+            "DeliveryOrderSystem\\PDF\\": "includes/PDF/"
+        }
+    }
+}

@@ -1,0 +1,746 @@
+2025-03-26 03:17:10.628657 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:17:17.981082 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:18:04.936902 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:19:11.690042 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:05.990890 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:14.610413 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:15.648869 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:16.429949 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:16.901215 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:17.128959 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:17.336426 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:17.661003 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:17.846055 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:18.199033 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:18.561723 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:18.894433 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:19.088264 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:19.276559 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:19.642760 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:19.861088 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:20.243364 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:20.560504 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:24.476147 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:24.662662 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:25.025051 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:25.349551 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:25.681792 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:26.047821 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:26.365829 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:20:42.272262 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:21:37.878571 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:23:20.460614 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:24:36.159107 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:25:26.133542 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:25:29.222111 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:26:48.034739 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:29:15.630605 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 03:36:01.023077 - Uncaught Error: Attempt to assign property "bg_color" on bool in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php:178
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1292): getOrder()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/rest-api.php(449): WP_REST_Server->serve_request()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#5 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#6 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(565): WP_Hook->do_action()
+#7 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(418): do_action_ref_array()
+#8 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp.php(813): WP->parse_request()
+#9 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/functions.php(1336): WP->main()
+#10 /home/kimmecom/cms.amamy.okhub-tech.com/wp-blog-header.php(16): wp()
+#11 /home/kimmecom/cms.amamy.okhub-tech.com/index.php(17): require('/home/kimmecom/...')
+#12 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/orderapi.php on line 178
+
+2025-03-26 07:09:50.302381 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:18.920331 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:20.886699 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:27.778440 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:29.851718 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:34.722373 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:39.289618 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:48.812762 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:10:52.776407 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+
+2025-03-26 07:11:26.324179 - Uncaught Error: Failed opening required '/home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/class-group-order-wp-list-item.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php:30
+Stack trace:
+#0 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(324): group_order_page_render_callback()
+#1 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#2 /home/kimmecom/cms.amamy.okhub-tech.com/wp-includes/plugin.php(517): WP_Hook->do_action()
+#3 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/admin.php(259): do_action()
+#4 /home/kimmecom/cms.amamy.okhub-tech.com/wp-admin/edit.php(10): require_once('/home/kimmecom/...')
+#5 {main}
+  thrown in /home/kimmecom/cms.amamy.okhub-tech.com/wp-content/themes/okhub-theme/inc/grouporder.php on line 30
+

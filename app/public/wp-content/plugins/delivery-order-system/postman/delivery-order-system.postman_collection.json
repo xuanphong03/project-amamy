@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Delivery Order System IPN",
+    "_postman_id": "3a4f9b1f-5c6a-4e55-8f07-123456789abc",
+    "description": "Mô phỏng OnePay IPN (`PUT /delivery-order-system/v1/ipn`). Thay thế `{{baseUrl}}`, header và body tùy theo môi trường thật để gửi thử.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "IPN - simulate success",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-OP-Date",
+            "value": "{{xOpDate}}",
+            "description": "ISO timestamp from OnePay headers"
+          },
+          {
+            "key": "X-OP-Authorization",
+            "value": "{{xOpAuthorization}}",
+            "description": "HMAC signature that the plugin verifies; use real OnePay signature or disable verification temporarily."
+          },
+          {
+            "key": "X-OP-Expires",
+            "value": "{{xOpExpires}}",
+            "description": "TTL value OnePay sent (default 3600)."
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bank_txn_ref\": \"TXN-20251219-0001\",\n  \"invoice\": {\n    \"id\": \"INV-1001\"\n  },\n  \"user\": {\n    \"id\": \"123\",\n    \"reference\": \"DELIVERY_123_456_20251219\"\n  },\n  \"state\": \"success\",\n  \"amount\": \"1500.00\",\n  \"currency\": \"VND\",\n  \"create_time\": \"2025-12-19T07:00:00Z\",\n  \"account\": {\n    \"account_number\": \"123456789\",\n    \"bank_name\": \"Sample Bank\"\n  },\n  \"merchant_id\": \"MERCHANT123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/wp-json/delivery-order-system/v1/ipn?id={{fundTransferId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "wp-json",
+            "delivery-order-system",
+            "v1",
+            "ipn"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "{{fundTransferId}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://cms.amamy.local"
+    },
+    {
+      "key": "fundTransferId",
+      "value": "FT-20251219-123"
+    },
+    {
+      "key": "xOpDate",
+      "value": "2025-12-19T08:00:00Z"
+    },
+    {
+      "key": "xOpAuthorization",
+      "value": "REPLACE_WITH_REAL_SIGNATURE"
+    },
+    {
+      "key": "xOpExpires",
+      "value": "3600"
+    }
+  ]
+}
+

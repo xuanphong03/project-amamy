@@ -1,0 +1,42 @@
+{
+    "name": "wp-sheet-editor-pro",
+    "version": "2.25.17",
+    "vgDistName": "wp-sheet-editor-bulk-spreadsheet-editor-for-posts-and-pages",
+    "vgPreviousVersion": "2.25.17-beta.1",
+    "sheetEditorModules": {
+        "free": [
+            "autofill-cells",
+            "columns-resizing",
+            "columns-visibility",
+            "filters",
+            "wp-sheet-editor",
+            "user-path"
+        ],
+        "pro": [
+            "acf",
+            "advanced-filters",
+            "columns-renaming",
+            "custom-post-types",
+            "formulas",
+            "custom-columns",
+            "spreadsheet-setup",
+            "woocommerce",
+            "universal-sheet",
+            "yoast-seo",
+            "wpml",
+            "posts-templates",
+            "columns-manager"
+        ],
+        "dev2": [
+            "scheduled-tasks"
+        ]
+    },
+    "package_file_path": "C:\\VegaCorp\\dev\\wp-sheet-editor\/posts-pages-products-sheet\/package.json",
+    "vgEditorKeys": [
+        "post",
+        "page",
+        "product"
+    ],
+    "wpOrgRepo": "https:\/\/plugins.svn.wordpress.org\/wp-sheet-editor-bulk-spreadsheet-editor-for-posts-and-pages\/",
+    "textName": "vg_sheet_editor_posts"
+}

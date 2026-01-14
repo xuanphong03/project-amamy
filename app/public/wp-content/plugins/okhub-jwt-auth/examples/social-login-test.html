@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Social Login API Test</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f5f5f5;
+            }
+            .container {
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #555;
+            }
+            input[type="text"],
+            input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+            button {
+                background: #007cba;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            button:hover {
+                background: #005a87;
+            }
+            .response {
+                margin-top: 20px;
+                padding: 15px;
+                border-radius: 5px;
+                white-space: pre-wrap;
+                font-family: monospace;
+                font-size: 14px;
+            }
+            .success {
+                background: #d4edda;
+                border: 1px solid #c3e6cb;
+                color: #155724;
+            }
+            .error {
+                background: #f8d7da;
+                border: 1px solid #f5c6cb;
+                color: #721c24;
+            }
+            .scenario {
+                background: #e7f3ff;
+                border: 1px solid #b3d9ff;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 5px;
+            }
+            .scenario h3 {
+                margin-top: 0;
+                color: #0066cc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🔐 Social Login API Test</h1>
+
+            <form id="socialLoginForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="googleId">Google ID:</label>
+                    <input type="text" id="googleId" name="googleId" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="picture">Picture URL (optional):</label>
+                    <input type="text" id="picture" name="picture" />
+                </div>
+
+                <button type="submit">Test Social Login</button>
+                <button type="button" onclick="fillTestData()">
+                    Fill Test Data
+                </button>
+                <button type="button" onclick="clearForm()">Clear</button>
+            </form>
+
+            <div class="scenario">
+                <h3>📋 Test Scenarios</h3>
+                <p>
+                    <strong>Scenario 1 - New User:</strong> Use a new email that
+                    doesn't exist in WordPress
+                </p>
+                <p>
+                    <strong>Scenario 2 - Existing Google User:</strong> Use an
+                    email that already has Google login
+                </p>
+                <p>
+                    <strong>Scenario 3 - Local User Merge:</strong> Use an email
+                    that exists as local user
+                </p>
+            </div>
+
+            <div id="response" class="response" style="display: none"></div>
+        </div>
+
+        <script>
+            // Get WordPress site URL
+            const siteUrl = window.location.origin;
+            const apiUrl = `${siteUrl}/wp-json/okhub-jwt/v1/social-login`;
+
+            document
+                .getElementById("socialLoginForm")
+                .addEventListener("submit", async function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(this);
+                    const data = {
+                        provider: "google",
+                        email: formData.get("email"),
+                        googleId: formData.get("googleId"),
+                        name: formData.get("name"),
+                        picture: formData.get("picture") || "",
+                    };
+
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify(data),
+                        });
+
+                        const result = await response.json();
+                        displayResponse(result, response.ok);
+                    } catch (error) {
+                        displayResponse(
+                            {
+                                success: false,
+                                message: "Network error: " + error.message,
+                            },
+                            false
+                        );
+                    }
+                });
+
+            function displayResponse(data, isSuccess) {
+                const responseDiv = document.getElementById("response");
+                responseDiv.style.display = "block";
+                responseDiv.className = `response ${
+                    isSuccess ? "success" : "error"
+                }`;
+                responseDiv.textContent = JSON.stringify(data, null, 2);
+            }
+
+            function fillTestData() {
+                document.getElementById("email").value = "testuser@gmail.com";
+                document.getElementById("googleId").value =
+                    "12345678901234567890";
+                document.getElementById("name").value = "Test User";
+                document.getElementById("picture").value =
+                    "https://via.placeholder.com/150";
+            }
+
+            function clearForm() {
+                document.getElementById("socialLoginForm").reset();
+                document.getElementById("response").style.display = "none";
+            }
+
+            // Auto-fill with different test data on page load
+            window.addEventListener("load", function () {
+                const testEmails = [
+                    "newuser@gmail.com",
+                    "existinguser@gmail.com",
+                    "localuser@example.com",
+                ];
+
+                const randomEmail =
+                    testEmails[Math.floor(Math.random() * testEmails.length)];
+                document.getElementById("email").value = randomEmail;
+                document.getElementById("googleId").value = Math.random()
+                    .toString(36)
+                    .substr(2, 20);
+                document.getElementById("name").value =
+                    "Test User " + Math.floor(Math.random() * 1000);
+            });
+        </script>
+    </body>
+</html>

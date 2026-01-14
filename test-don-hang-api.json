@@ -1,0 +1,161 @@
+{
+  "description": "Data mẫu để test API tạo đơn hàng - POST /wp-json/api/v1/don-hang-label",
+  "examples": [
+    {
+      "name": "Đơn hàng đầy đủ thông tin với use_pickup",
+      "data": {
+        "ho_ten": "Nguyễn Văn A",
+        "so_dien_thoai": "0912345678",
+        "email": "nguyenvana@example.com",
+        "ma_khach_hang": "KH001",
+        "dia_chi_lay_hang": "123 Đường Láng, Phường Láng Thượng",
+        "ten_thanh_pho": "Hà Nội",
+        "ma_thanh_pho": "HN",
+        "ten_duong": "Đường Láng",
+        "so_nha": "123",
+        "phuong_thuc_lay_hang": "use_pickup",
+        "thoi_gian_lay_hang": "2025-01-20 14:00",
+        "danh_sach_kien_hang": [
+          {
+            "can_nang": "2.5"
+          },
+          {
+            "can_nang": "1.8"
+          },
+          {
+            "can_nang": "3.2"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Đơn hàng với use_label (không cần thoi_gian_lay_hang)",
+      "data": {
+        "ho_ten": "Trần Thị B",
+        "so_dien_thoai": "0987654321",
+        "email": "tranthib@example.com",
+        "ma_khach_hang": "KH002",
+        "dia_chi_lay_hang": "456 Đường Nguyễn Trãi, Phường Thanh Xuân Trung",
+        "ten_thanh_pho": "Hà Nội",
+        "ma_thanh_pho": "HN",
+        "ten_duong": "Đường Nguyễn Trãi",
+        "so_nha": "456",
+        "phuong_thuc_lay_hang": "use_label",
+        "danh_sach_kien_hang": [
+          {
+            "can_nang": "1.5"
+          },
+          {
+            "can_nang": "2.0"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Đơn hàng tối thiểu (chỉ các trường bắt buộc)",
+      "data": {
+        "ho_ten": "Lê Văn C",
+        "so_dien_thoai": "0901234567",
+        "email": "levanc@example.com",
+        "dia_chi_lay_hang": "789 Đường Hoàng Hoa Thám, Phường 12",
+        "ten_thanh_pho": "Hồ Chí Minh"
+      }
+    },
+    {
+      "name": "Đơn hàng không có mã khách hàng",
+      "data": {
+        "ho_ten": "Phạm Thị D",
+        "so_dien_thoai": "0976543210",
+        "email": "phamthid@example.com",
+        "dia_chi_lay_hang": "321 Đường Võ Văn Tần, Phường 6",
+        "ten_thanh_pho": "Hồ Chí Minh",
+        "ma_thanh_pho": "HCM",
+        "ten_duong": "Đường Võ Văn Tần",
+        "so_nha": "321",
+        "phuong_thuc_lay_hang": "use_pickup",
+        "thoi_gian_lay_hang": "2025-01-25 10:00",
+        "danh_sach_kien_hang": [
+          {
+            "can_nang": "5.0"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Đơn hàng không có danh_sach_kien_hang",
+      "data": {
+        "ho_ten": "Hoàng Văn E",
+        "so_dien_thoai": "0965432109",
+        "email": "hoangvane@example.com",
+        "ma_khach_hang": "KH003",
+        "dia_chi_lay_hang": "654 Đường Trần Phú, Phường 4",
+        "ten_thanh_pho": "Đà Nẵng",
+        "ma_thanh_pho": "DN",
+        "ten_duong": "Đường Trần Phú",
+        "so_nha": "654",
+        "phuong_thuc_lay_hang": "use_label"
+      }
+    }
+  ],
+  "curl_example": {
+    "description": "Ví dụ sử dụng curl để test API",
+    "command": "curl -X POST 'http://your-site.local/wp-json/api/v1/don-hang-label' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"ho_ten\": \"Nguyễn Văn A\",\n    \"so_dien_thoai\": \"0912345678\",\n    \"email\": \"nguyenvana@example.com\",\n    \"ma_khach_hang\": \"KH001\",\n    \"dia_chi_lay_hang\": \"123 Đường Láng\",\n    \"ten_thanh_pho\": \"Hà Nội\",\n    \"ma_thanh_pho\": \"HN\",\n    \"ten_duong\": \"Đường Láng\",\n    \"so_nha\": \"123\",\n    \"phuong_thuc_lay_hang\": \"use_pickup\",\n    \"thoi_gian_lay_hang\": \"2025-01-20 14:00\",\n    \"danh_sach_kien_hang\": [\n      {\"can_nang\": \"2.5\"},\n      {\"can_nang\": \"1.8\"}\n    ]\n  }'"
+  },
+  "javascript_fetch_example": {
+    "description": "Ví dụ sử dụng JavaScript Fetch API",
+    "code": "fetch('http://your-site.local/wp-json/api/v1/don-hang-label', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n  },\n  body: JSON.stringify({\n    ho_ten: 'Nguyễn Văn A',\n    so_dien_thoai: '0912345678',\n    email: 'nguyenvana@example.com',\n    ma_khach_hang: 'KH001',\n    dia_chi_lay_hang: '123 Đường Láng',\n    ten_thanh_pho: 'Hà Nội',\n    ma_thanh_pho: 'HN',\n    ten_duong: 'Đường Láng',\n    so_nha: '123',\n    phuong_thuc_lay_hang: 'use_pickup',\n    thoi_gian_lay_hang: '2025-01-20 14:00',\n    danh_sach_kien_hang: [\n      { can_nang: '2.5' },\n      { can_nang: '1.8' }\n    ]\n  })\n})\n.then(response => response.json())\n.then(data => console.log('Success:', data))\n.catch((error) => console.error('Error:', error));"
+  },
+  "postman_collection": {
+    "description": "Có thể import vào Postman",
+    "url": "http://your-site.local/wp-json/api/v1/don-hang-label",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "ho_ten": "Nguyễn Văn A",
+      "so_dien_thoai": "0912345678",
+      "email": "nguyenvana@example.com",
+      "ma_khach_hang": "KH001",
+      "dia_chi_lay_hang": "123 Đường Láng",
+      "ten_thanh_pho": "Hà Nội",
+      "ma_thanh_pho": "HN",
+      "ten_duong": "Đường Láng",
+      "so_nha": "123",
+      "phuong_thuc_lay_hang": "use_pickup",
+      "thoi_gian_lay_hang": "2025-01-20 14:00",
+      "danh_sach_kien_hang": [
+        {
+          "can_nang": "2.5"
+        },
+        {
+          "can_nang": "1.8"
+        }
+      ]
+    }
+  },
+  "validation_rules": {
+    "required_fields": [
+      "ho_ten",
+      "so_dien_thoai",
+      "email",
+      "dia_chi_lay_hang",
+      "ten_thanh_pho"
+    ],
+    "optional_fields": [
+      "ma_khach_hang",
+      "ma_thanh_pho",
+      "ten_duong",
+      "so_nha",
+      "phuong_thuc_lay_hang",
+      "thoi_gian_lay_hang",
+      "danh_sach_kien_hang"
+    ],
+    "pickup_method_values": ["use_label", "use_pickup"],
+    "notes": [
+      "thoi_gian_lay_hang chỉ cần khi phuong_thuc_lay_hang = 'use_pickup'",
+      "danh_sach_kien_hang là mảng các object, mỗi object chỉ cần can_nang",
+      "email phải đúng định dạng email"
+    ]
+  }
+}

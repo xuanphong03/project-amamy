@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test API Đơn Hàng - Form Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      textarea {
+        height: 80px;
+      }
+      .package-item {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        background: #f9f9f9;
+      }
+      .package-item h4 {
+        margin-top: 0;
+      }
+      button {
+        background: #0073aa;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #005a87;
+      }
+      #result {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 4px;
+        display: none;
+      }
+      .success {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+      }
+      .error {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+      }
+      .add-package {
+        background: #28a745;
+        margin-bottom: 15px;
+      }
+      .add-package:hover {
+        background: #218838;
+      }
+      .remove-package {
+        background: #dc3545;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+      .remove-package:hover {
+        background: #c82333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test API Tạo Đơn Hàng - Form Data</h1>
+
+    <form id="orderForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Họ và tên *</label>
+        <input type="text" name="ho_ten" required />
+      </div>
+
+      <div class="form-group">
+        <label>Số điện thoại *</label>
+        <input type="tel" name="so_dien_thoai" required />
+      </div>
+
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label>Mã khách hàng</label>
+        <input type="text" name="ma_khach_hang" />
+      </div>
+
+      <div class="form-group">
+        <label>Địa chỉ lấy hàng *</label>
+        <textarea name="dia_chi_lay_hang" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Tên thành phố *</label>
+        <input type="text" name="ten_thanh_pho" required />
+      </div>
+
+      <div class="form-group">
+        <label>Mã thành phố</label>
+        <input type="text" name="ma_thanh_pho" />
+      </div>
+
+      <div class="form-group">
+        <label>Tên đường</label>
+        <input type="text" name="ten_duong" />
+      </div>
+
+      <div class="form-group">
+        <label>Số nhà</label>
+        <input type="text" name="so_nha" />
+      </div>
+
+      <div class="form-group">
+        <label>Phương thức lấy hàng</label>
+        <select name="phuong_thuc_lay_hang">
+          <option value="">-- Chọn --</option>
+          <option value="use_label">Use Label</option>
+          <option value="use_pickup">Use Pickup</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Thời gian lấy hàng</label>
+        <input
+          type="text"
+          name="thoi_gian_lay_hang"
+          placeholder="2025-01-20 14:00"
+        />
+      </div>
+
+      <h3>Danh sách kiện hàng</h3>
+      <button type="button" class="add-package" onclick="addPackage()">
+        + Thêm kiện hàng
+      </button>
+      <div id="packages"></div>
+
+      <button type="submit">Tạo Đơn Hàng</button>
+    </form>
+
+    <hr />
+
+    <h1>Test API Cập Nhật Đơn Hàng - PATCH</h1>
+    <form id="updateForm">
+      <div class="form-group">
+        <label>Post ID *</label>
+        <input
+          type="number"
+          name="post_id"
+          required
+          style="
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+          "
+        />
+      </div>
+      <div class="form-group">
+        <label>Họ và tên (Cập nhật)</label>
+        <input type="text" name="ho_ten" />
+      </div>
+      <div class="form-group">
+        <label>Phương thức lấy hàng</label>
+        <select name="phuong_thuc_lay_hang">
+          <option value="">-- Giữ nguyên --</option>
+          <option value="use_label">Use Label</option>
+          <option value="use_pickup">Use Pickup</option>
+        </select>
+      </div>
+      <button type="submit" style="background: #28a745">
+        Cập Nhật Đơn Hàng (PATCH)
+      </button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+      // ... (phần code cũ) ...
+
+      document
+        .getElementById("updateForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const post_id = formData.get("post_id");
+          const resultDiv = document.getElementById("result");
+
+          // Thay đổi URL này thành URL thực tế của bạn
+          const apiUrl = `http://your-site.local/wp-json/api/v1/don-hang-label/${post_id}`;
+
+          try {
+            const response = await fetch(apiUrl, {
+              method: "PATCH",
+              body: formData,
+            });
+
+            const data = await response.json();
+
+            resultDiv.style.display = "block";
+            if (response.ok) {
+              resultDiv.className = "success";
+              resultDiv.innerHTML =
+                "<h3>Thành công!</h3><pre>" +
+                JSON.stringify(data, null, 2) +
+                "</pre>";
+            } else {
+              resultDiv.className = "error";
+              resultDiv.innerHTML =
+                "<h3>Lỗi!</h3><pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            }
+          } catch (error) {
+            resultDiv.style.display = "block";
+            resultDiv.className = "error";
+            resultDiv.innerHTML = "<h3>Lỗi!</h3><p>" + error.message + "</p>";
+          }
+        });
+
+      let packageCount = 0;
+
+      function addPackage() {
+        const packagesDiv = document.getElementById("packages");
+        const packageDiv = document.createElement("div");
+        packageDiv.className = "package-item";
+        packageDiv.id = "package-" + packageCount;
+
+        packageDiv.innerHTML = `
+                <h4>Kiện hàng #${packageCount + 1}</h4>
+                <div class="form-group">
+                    <label>Cân nặng *</label>
+                    <input type="text" name="danh_sach_kien_hang[${packageCount}][can_nang]" required>
+                </div>
+                <div class="form-group">
+                    <label>Dạng label</label>
+                    <input type="text" name="danh_sach_kien_hang[${packageCount}][dang_label]" placeholder="PDF, ZPL, etc.">
+                </div>
+                <div class="form-group">
+                    <label>File label (Chỉ PDF)</label>
+                    <input type="file" name="file_label_${packageCount}" accept=".pdf">
+                </div>
+                <div class="form-group">
+                    <label>Trạng thái gửi label</label>
+                    <select name="danh_sach_kien_hang[${packageCount}][trang_thai_gui_label]">
+                        <option value="false">Chưa gửi</option>
+                        <option value="true">Đã gửi</option>
+                    </select>
+                </div>
+                <button type="button" class="remove-package" onclick="removePackage(${packageCount})">Xóa kiện hàng</button>
+            `;
+
+        packagesDiv.appendChild(packageDiv);
+        packageCount++;
+      }
+
+      function removePackage(index) {
+        const packageDiv = document.getElementById("package-" + index);
+        if (packageDiv) {
+          packageDiv.remove();
+        }
+      }
+
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const resultDiv = document.getElementById("result");
+
+          // Thay đổi URL này thành URL thực tế của bạn
+          const apiUrl = "http://your-site.local/wp-json/api/v1/don-hang-label";
+
+          try {
+            const response = await fetch(apiUrl, {
+              method: "POST", // Giữ nguyên POST cho create
+              body: formData,
+            });
+
+            const data = await response.json();
+
+            resultDiv.style.display = "block";
+            if (response.ok) {
+              resultDiv.className = "success";
+              resultDiv.innerHTML =
+                "<h3>Thành công!</h3><pre>" +
+                JSON.stringify(data, null, 2) +
+                "</pre>";
+            } else {
+              resultDiv.className = "error";
+              resultDiv.innerHTML =
+                "<h3>Lỗi!</h3><pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            }
+          } catch (error) {
+            resultDiv.style.display = "block";
+            resultDiv.className = "error";
+            resultDiv.innerHTML = "<h3>Lỗi!</h3><p>" + error.message + "</p>";
+          }
+        });
+
+      // Thêm một kiện hàng mặc định
+      addPackage();
+    </script>
+  </body>
+</html>

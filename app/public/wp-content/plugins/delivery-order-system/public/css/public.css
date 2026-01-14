@@ -1,0 +1,49 @@
+/**
+ * Public-facing styles for Delivery Order System
+ */
+
+.delivery-order-system-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.delivery-order-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-order-form .form-group {
+    margin-bottom: 15px;
+}
+
+.delivery-order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.delivery-order-form input,
+.delivery-order-form textarea,
+.delivery-order-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.delivery-order-form button {
+    background: #0073aa;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delivery-order-form button:hover {
+    background: #005a87;
+}
+

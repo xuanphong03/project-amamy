@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Social Login Settings Demo</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f5f5f5;
+            }
+            .container {
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .settings-section {
+                background: #f8f9fa;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+                border-left: 4px solid #007cba;
+            }
+            .settings-section h3 {
+                margin-top: 0;
+                color: #007cba;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #555;
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: 300px;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            .description {
+                font-size: 13px;
+                color: #666;
+                margin-top: 5px;
+            }
+            .status-indicator {
+                display: inline-block;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .status-active {
+                background: #d4edda;
+                color: #155724;
+            }
+            .status-inactive {
+                background: #f8d7da;
+                color: #721c24;
+            }
+            .status-missing {
+                background: #fff3cd;
+                color: #856404;
+            }
+            .guide-section {
+                background: #e7f3ff;
+                border: 1px solid #b3d9ff;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+            .guide-section h3 {
+                margin-top: 0;
+                color: #0066cc;
+            }
+            .guide-section ol {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .guide-section li {
+                margin-bottom: 8px;
+            }
+            .features-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                margin: 20px 0;
+            }
+            .feature-item {
+                background: #f0f8ff;
+                padding: 15px;
+                border-radius: 5px;
+                border: 1px solid #b3d9ff;
+            }
+            .feature-item h4 {
+                margin-top: 0;
+                color: #0066cc;
+            }
+            .scenarios-section {
+                background: #fff3cd;
+                border: 1px solid #ffc107;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+            .scenarios-section h3 {
+                margin-top: 0;
+                color: #856404;
+            }
+            .scenarios-section ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .scenarios-section li {
+                margin-bottom: 8px;
+            }
+            .api-example {
+                background: #f1f1f1;
+                padding: 15px;
+                border-radius: 5px;
+                font-family: monospace;
+                font-size: 14px;
+                margin: 15px 0;
+                overflow-x: auto;
+            }
+            .button {
+                background: #007cba;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+            .button:hover {
+                background: #005a87;
+            }
+            .button-secondary {
+                background: #6c757d;
+            }
+            .button-secondary:hover {
+                background: #545b62;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🌐 Social Login Settings Demo</h1>
+
+            <div class="settings-section">
+                <h3>📋 Social Login Configuration</h3>
+
+                <div class="form-group">
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="enable_social_login"
+                            checked
+                        />
+                        Enable Social Login
+                    </label>
+                    <div class="description">
+                        Enable Google Social Login functionality
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="google_client_id">Google Client ID:</label>
+                    <input
+                        type="text"
+                        id="google_client_id"
+                        placeholder="1234567890-abcdefghijklmnop.apps.googleusercontent.com"
+                    />
+                    <div class="description">
+                        Google OAuth Client ID from Google Cloud Console
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="google_client_secret"
+                        >Google Client Secret:</label
+                    >
+                    <input
+                        type="password"
+                        id="google_client_secret"
+                        placeholder="GOCSPX-abcdefghijklmnopqrstuvwxyz"
+                    />
+                    <div class="description">
+                        Google OAuth Client Secret from Google Cloud Console
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="auto_verify_email" checked />
+                        Auto Verify Google Email
+                    </label>
+                    <div class="description">
+                        Automatically verify email addresses for Google users
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="allow_account_merge"
+                            checked
+                        />
+                        Allow Account Merge
+                    </label>
+                    <div class="description">
+                        Allow merging Google accounts with existing local
+                        accounts
+                    </div>
+                </div>
+
+                <button class="button" onclick="saveSettings()">
+                    Save Settings
+                </button>
+                <button
+                    class="button button-secondary"
+                    onclick="resetSettings()"
+                >
+                    Reset to Defaults
+                </button>
+            </div>
+
+            <div class="guide-section">
+                <h3>📋 Google OAuth Setup Guide</h3>
+                <ol>
+                    <li>
+                        Go to
+                        <a
+                            href="https://console.cloud.google.com/"
+                            target="_blank"
+                            >Google Cloud Console</a
+                        >
+                    </li>
+                    <li>Create a new project or select existing one</li>
+                    <li>Enable Google+ API</li>
+                    <li>
+                        Go to "Credentials" → "Create Credentials" → "OAuth 2.0
+                        Client IDs"
+                    </li>
+                    <li>Set Application type to "Web application"</li>
+                    <li>
+                        Add authorized redirect URIs:
+                        <code>/wp-json/okhub-jwt/v1/social-login</code>
+                    </li>
+                    <li>Copy Client ID and Client Secret to settings above</li>
+                </ol>
+            </div>
+
+            <div class="settings-section">
+                <h3>📈 Current Settings Status</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>Google Login</h4>
+                        <span
+                            id="status_google_login"
+                            class="status-indicator status-active"
+                            >✅ Active</span
+                        >
+                        <div class="description">
+                            Enable/disable Google login
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Auto Email Verify</h4>
+                        <span
+                            id="status_auto_verify"
+                            class="status-indicator status-active"
+                            >✅ Active</span
+                        >
+                        <div class="description">Auto verify Google emails</div>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Account Merge</h4>
+                        <span
+                            id="status_account_merge"
+                            class="status-indicator status-active"
+                            >✅ Active</span
+                        >
+                        <div class="description">Merge with local accounts</div>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Google Credentials</h4>
+                        <span
+                            id="status_credentials"
+                            class="status-indicator status-missing"
+                            >❌ Missing</span
+                        >
+                        <div class="description">Client ID & Secret set</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scenarios-section">
+                <h3>💡 Social Login Scenarios</h3>
+                <ul>
+                    <li>
+                        <strong>New User:</strong> Automatically creates
+                        WordPress account with Google info
+                    </li>
+                    <li>
+                        <strong>Existing Google User:</strong> Direct login with
+                        Google credentials
+                    </li>
+                    <li>
+                        <strong>Local User Merge:</strong> Links Google account
+                        to existing WordPress account
+                    </li>
+                </ul>
+                <p>
+                    <em
+                        >All scenarios return standard JWT tokens for seamless
+                        integration.</em
+                    >
+                </p>
+            </div>
+
+            <div class="settings-section">
+                <h3>🔗 API Endpoint</h3>
+                <p><strong>Social Login Endpoint:</strong></p>
+                <div class="api-example">
+                    POST /wp-json/okhub-jwt/v1/social-login Content-Type:
+                    application/json { "provider": "google", "email":
+                    "user@gmail.com", "googleId": "1234567890", "name": "John
+                    Doe", "picture": "https://example.com/avatar.jpg" }
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>🧪 Test Social Login</h3>
+                <p>Test the Social Login functionality with sample data:</p>
+
+                <div class="form-group">
+                    <label for="test_email">Test Email:</label>
+                    <input
+                        type="text"
+                        id="test_email"
+                        value="testuser@gmail.com"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="test_google_id">Test Google ID:</label>
+                    <input
+                        type="text"
+                        id="test_google_id"
+                        value="12345678901234567890"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="test_name">Test Name:</label>
+                    <input type="text" id="test_name" value="Test User" />
+                </div>
+
+                <button class="button" onclick="testSocialLogin()">
+                    Test Social Login
+                </button>
+                <button
+                    class="button button-secondary"
+                    onclick="fillRandomData()"
+                >
+                    Fill Random Data
+                </button>
+
+                <div
+                    id="test_result"
+                    style="
+                        margin-top: 20px;
+                        padding: 15px;
+                        border-radius: 5px;
+                        display: none;
+                    "
+                ></div>
+            </div>
+        </div>
+
+        <script>
+            // Update status indicators
+            function updateStatusIndicators() {
+                const enableSocial = document.getElementById(
+                    "enable_social_login"
+                ).checked;
+                const autoVerify =
+                    document.getElementById("auto_verify_email").checked;
+                const allowMerge = document.getElementById(
+                    "allow_account_merge"
+                ).checked;
+                const clientId =
+                    document.getElementById("google_client_id").value;
+                const clientSecret = document.getElementById(
+                    "google_client_secret"
+                ).value;
+
+                // Update status indicators
+                document.getElementById("status_google_login").textContent =
+                    enableSocial ? "✅ Active" : "❌ Inactive";
+                document.getElementById("status_google_login").className =
+                    "status-indicator " +
+                    (enableSocial ? "status-active" : "status-inactive");
+
+                document.getElementById("status_auto_verify").textContent =
+                    autoVerify ? "✅ Active" : "❌ Inactive";
+                document.getElementById("status_auto_verify").className =
+                    "status-indicator " +
+                    (autoVerify ? "status-active" : "status-inactive");
+
+                document.getElementById("status_account_merge").textContent =
+                    allowMerge ? "✅ Active" : "❌ Inactive";
+                document.getElementById("status_account_merge").className =
+                    "status-indicator " +
+                    (allowMerge ? "status-active" : "status-inactive");
+
+                const hasCredentials = clientId && clientSecret;
+                document.getElementById("status_credentials").textContent =
+                    hasCredentials ? "✅ Configured" : "❌ Missing";
+                document.getElementById("status_credentials").className =
+                    "status-indicator " +
+                    (hasCredentials ? "status-active" : "status-missing");
+            }
+
+            // Save settings
+            function saveSettings() {
+                const settings = {
+                    enable_social_login: document.getElementById(
+                        "enable_social_login"
+                    ).checked,
+                    google_client_id:
+                        document.getElementById("google_client_id").value,
+                    google_client_secret: document.getElementById(
+                        "google_client_secret"
+                    ).value,
+                    auto_verify_email:
+                        document.getElementById("auto_verify_email").checked,
+                    allow_account_merge: document.getElementById(
+                        "allow_account_merge"
+                    ).checked,
+                };
+
+                // In real implementation, this would save to WordPress options
+                localStorage.setItem(
+                    "okhub_social_login_settings",
+                    JSON.stringify(settings)
+                );
+
+                alert(
+                    "Settings saved successfully! (Demo mode - saved to localStorage)"
+                );
+                updateStatusIndicators();
+            }
+
+            // Reset settings
+            function resetSettings() {
+                if (confirm("Reset all settings to defaults?")) {
+                    document.getElementById(
+                        "enable_social_login"
+                    ).checked = false;
+                    document.getElementById("google_client_id").value = "";
+                    document.getElementById("google_client_secret").value = "";
+                    document.getElementById("auto_verify_email").checked = true;
+                    document.getElementById(
+                        "allow_account_merge"
+                    ).checked = true;
+
+                    updateStatusIndicators();
+                    alert("Settings reset to defaults!");
+                }
+            }
+
+            // Test social login
+            function testSocialLogin() {
+                const email = document.getElementById("test_email").value;
+                const googleId =
+                    document.getElementById("test_google_id").value;
+                const name = document.getElementById("test_name").value;
+
+                if (!email || !googleId || !name) {
+                    alert("Please fill in all test fields");
+                    return;
+                }
+
+                const testData = {
+                    provider: "google",
+                    email: email,
+                    googleId: googleId,
+                    name: name,
+                    picture: "https://via.placeholder.com/150",
+                };
+
+                const resultDiv = document.getElementById("test_result");
+                resultDiv.style.display = "block";
+                resultDiv.innerHTML = `
+                <h4>Test Request Data:</h4>
+                <div class="api-example">${JSON.stringify(
+                    testData,
+                    null,
+                    2
+                )}</div>
+                <p><strong>Note:</strong> This is a demo. In real implementation, this would make an actual API call to the WordPress endpoint.</p>
+            `;
+            }
+
+            // Fill random data
+            function fillRandomData() {
+                const randomId = Math.random().toString(36).substr(2, 20);
+                const randomName =
+                    "Test User " + Math.floor(Math.random() * 1000);
+                const randomEmail =
+                    "testuser" +
+                    Math.floor(Math.random() * 1000) +
+                    "@gmail.com";
+
+                document.getElementById("test_email").value = randomEmail;
+                document.getElementById("test_google_id").value = randomId;
+                document.getElementById("test_name").value = randomName;
+            }
+
+            // Load saved settings
+            function loadSettings() {
+                const saved = localStorage.getItem(
+                    "okhub_social_login_settings"
+                );
+                if (saved) {
+                    const settings = JSON.parse(saved);
+                    document.getElementById("enable_social_login").checked =
+                        settings.enable_social_login || false;
+                    document.getElementById("google_client_id").value =
+                        settings.google_client_id || "";
+                    document.getElementById("google_client_secret").value =
+                        settings.google_client_secret || "";
+                    document.getElementById("auto_verify_email").checked =
+                        settings.auto_verify_email !== false;
+                    document.getElementById("allow_account_merge").checked =
+                        settings.allow_account_merge !== false;
+                }
+                updateStatusIndicators();
+            }
+
+            // Event listeners
+            document.addEventListener("DOMContentLoaded", function () {
+                loadSettings();
+
+                // Update status on change
+                document
+                    .getElementById("enable_social_login")
+                    .addEventListener("change", updateStatusIndicators);
+                document
+                    .getElementById("auto_verify_email")
+                    .addEventListener("change", updateStatusIndicators);
+                document
+                    .getElementById("allow_account_merge")
+                    .addEventListener("change", updateStatusIndicators);
+                document
+                    .getElementById("google_client_id")
+                    .addEventListener("input", updateStatusIndicators);
+                document
+                    .getElementById("google_client_secret")
+                    .addEventListener("input", updateStatusIndicators);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+.remodal-bulk-edit label {
+    display: block;
+    margin: 5px 0 10px;
+}
+
+.remodal-bulk-edit .selected-files {
+    margin-top: 10px;
+}
+
+.remodal-bulk-edit .selected-files .image-preview {
+    position: relative;
+    display: inline-block;
+}
+
+.remodal-bulk-edit .selected-files .image-preview .remove-file {
+    position: absolute;
+    right: 0;
+    padding: 2px 8px !important;
+    line-height: 20px;    
+}

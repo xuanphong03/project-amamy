@@ -1,0 +1,884 @@
+{
+    "info": {
+        "_postman_id": "okhub-jwt-auth-api",
+        "name": "Okhub JWT Auth API",
+        "description": "Complete RESTful API collection for Okhub JWT Authentication WordPress plugin with Email Verification, OTP Reset, and Google Social Login",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "okhub-jwt-auth",
+        "version": {
+            "major": 2,
+            "minor": 0,
+            "patch": 0
+        }
+    },
+    "item": [
+        {
+            "name": "🔐 Authentication",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"password123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/login",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "login"
+                            ]
+                        },
+                        "description": "User login with email/username and password"
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "// Auto-save tokens to environment variables",
+                                    "if (pm.response.code === 200) {",
+                                    "    const responseJson = pm.response.json();",
+                                    "    ",
+                                    "    if (responseJson.success && responseJson.token) {",
+                                    "        // Save access token",
+                                    "        pm.environment.set('access_token', responseJson.token.accessToken);",
+                                    "        ",
+                                    "        // Save refresh token",
+                                    "        pm.environment.set('refresh_token', responseJson.token.refreshToken);",
+                                    "        ",
+                                    "        // Save user info",
+                                    "        if (responseJson.data) {",
+                                    "            pm.environment.set('user_id', responseJson.data.id);",
+                                    "            pm.environment.set('user_email', responseJson.data.email);",
+                                    "            pm.environment.set('username', responseJson.data.username);",
+                                    "        }",
+                                    "        ",
+                                    "        console.log('✅ Tokens saved to environment variables');",
+                                    "        console.log('Access Token:', responseJson.token.accessToken.substring(0, 20) + '...');",
+                                    "        console.log('User ID:', responseJson.data?.id);",
+                                    "    } else {",
+                                    "        console.log('❌ Login failed or no token received');",
+                                    "    }",
+                                    "} else {",
+                                    "    console.log('❌ HTTP Error:', pm.response.code);",
+                                    "}"
+                                ]
+                            }
+                        }
+                    ],
+                    "response": []
+                },
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"user123\",\n    \"email\": \"user@example.com\",\n    \"password\": \"password123\",\n    \"first_name\": \"John\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/register",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "register"
+                            ]
+                        },
+                        "description": "User registration with username, email, password and optional first_name. Requires OTP verification if Email Verification is enabled in settings."
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "// Auto-save tokens to environment variables after registration",
+                                    "if (pm.response.code === 200) {",
+                                    "    const responseJson = pm.response.json();",
+                                    "    ",
+                                    "    if (responseJson.success && responseJson.token) {",
+                                    "        // Save access token",
+                                    "        pm.environment.set('access_token', responseJson.token.accessToken);",
+                                    "        ",
+                                    "        // Save refresh token",
+                                    "        pm.environment.set('refresh_token', responseJson.token.refreshToken);",
+                                    "        ",
+                                    "        // Save user info",
+                                    "        if (responseJson.data) {",
+                                    "            pm.environment.set('user_id', responseJson.data.id);",
+                                    "            pm.environment.set('user_email', responseJson.data.email);",
+                                    "            pm.environment.set('username', responseJson.data.username);",
+                                    "        }",
+                                    "        ",
+                                    "        console.log('✅ Registration successful - Tokens saved to environment variables');",
+                                    "        console.log('Access Token:', responseJson.token.accessToken.substring(0, 20) + '...');",
+                                    "        console.log('User ID:', responseJson.data?.id);",
+                                    "    } else {",
+                                    "        console.log('❌ Registration failed or no token received');",
+                                    "    }",
+                                    "} else {",
+                                    "    console.log('❌ HTTP Error:', pm.response.code);",
+                                    "}"
+                                ]
+                            }
+                        }
+                    ],
+                    "response": []
+                },
+
+                {
+                    "name": "Refresh Token",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"refresh_token\": \"{{refresh_token}}\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/refresh",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "refresh"
+                            ]
+                        },
+                        "description": "Refresh access token using refresh token"
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "// Auto-update tokens after refresh",
+                                    "if (pm.response.code === 200) {",
+                                    "    const responseJson = pm.response.json();",
+                                    "    ",
+                                    "    if (responseJson.success && responseJson.token) {",
+                                    "        // Update access token",
+                                    "        pm.environment.set('access_token', responseJson.token.accessToken);",
+                                    "        ",
+                                    "        // Update refresh token",
+                                    "        pm.environment.set('refresh_token', responseJson.token.refreshToken);",
+                                    "        ",
+                                    "        console.log('✅ Tokens refreshed and saved to environment variables');",
+                                    "        console.log('New Access Token:', responseJson.token.accessToken.substring(0, 20) + '...');",
+                                    "    } else {",
+                                    "        console.log('❌ Token refresh failed or no token received');",
+                                    "    }",
+                                    "} else {",
+                                    "    console.log('❌ HTTP Error:', pm.response.code);",
+                                    "}"
+                                ]
+                            }
+                        }
+                    ],
+                    "response": []
+                },
+                {
+                    "name": "Logout",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{access_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/logout",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "logout"
+                            ]
+                        },
+                        "description": "Logout current session"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Logout All Devices",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{access_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/logout-all",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "logout-all"
+                            ]
+                        },
+                        "description": "Logout from all devices"
+                    },
+                    "response": []
+                }
+            ],
+            "description": "Authentication endpoints for login, register, refresh, and logout"
+        },
+        {
+            "name": "📧 Registration OTP",
+            "item": [
+                {
+                    "name": "Verify Registration OTP",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\",\n    \"otp_code\": \"123456\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/register/verify",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "register",
+                                "verify"
+                            ]
+                        },
+                        "description": "Verify OTP code for user registration. Only available when Email Verification is enabled in settings. Returns JWT tokens upon successful verification."
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "// Auto-save tokens to environment variables after OTP verification",
+                                    "if (pm.response.code === 200) {",
+                                    "    const responseJson = pm.response.json();",
+                                    "    ",
+                                    "    if (responseJson.success && responseJson.token) {",
+                                    "        // Save access token",
+                                    "        pm.environment.set('access_token', responseJson.token.accessToken);",
+                                    "        ",
+                                    "        // Save refresh token",
+                                    "        pm.environment.set('refresh_token', responseJson.token.refreshToken);",
+                                    "        ",
+                                    "        // Save user info",
+                                    "        if (responseJson.data) {",
+                                    "            pm.environment.set('user_id', responseJson.data.id);",
+                                    "            pm.environment.set('user_email', responseJson.data.email);",
+                                    "            pm.environment.set('username', responseJson.data.username);",
+                                    "        }",
+                                    "        ",
+                                    "        console.log('✅ Registration OTP verified - Tokens saved to environment variables');",
+                                    "        console.log('Access Token:', responseJson.token.accessToken.substring(0, 20) + '...');",
+                                    "        console.log('User ID:', responseJson.data?.id);",
+                                    "    } else {",
+                                    "        console.log('❌ OTP verification failed or no token received');",
+                                    "    }",
+                                    "} else {",
+                                    "    console.log('❌ HTTP Error:', pm.response.code);",
+                                    "}"
+                                ]
+                            }
+                        }
+                    ],
+                    "response": []
+                },
+                {
+                    "name": "Resend Registration OTP",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/register/resend-otp",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "register",
+                                "resend-otp"
+                            ]
+                        },
+                        "description": "Resend OTP code for user registration verification. Only available when Email Verification is enabled in settings."
+                    },
+                    "response": []
+                }
+            ],
+            "description": "Registration OTP verification endpoints for email verification during user registration"
+        },
+        {
+            "name": "👤 User Management",
+            "item": [
+                {
+                    "name": "Get Current User",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{access_token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/users/me",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "users",
+                                "me"
+                            ]
+                        },
+                        "description": "Get current authenticated user information including email_verified field when Email Verification is enabled"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update Profile",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{access_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"phone\": \"+1234567890\",\n    \"gender\": \"male\",\n    \"date_of_birth\": \"1990-01-01\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/users/me/profile",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "users",
+                                "me",
+                                "profile"
+                            ]
+                        },
+                        "description": "Update user profile information"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Change Password",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{access_token}}"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"current_password\": \"oldpassword123\",\n    \"new_password\": \"newpassword123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/users/me/password",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "users",
+                                "me",
+                                "password"
+                            ]
+                        },
+                        "description": "Change user password"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User Sessions",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{access_token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/users/me/sessions",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "users",
+                                "me",
+                                "sessions"
+                            ]
+                        },
+                        "description": "Get user active sessions"
+                    },
+                    "response": []
+                }
+            ],
+            "description": "User management endpoints for profile and session management. Returns email_verified field when Email Verification is enabled"
+        },
+        {
+            "name": "🔑 Password Reset",
+            "item": [
+                {
+                    "name": "Forgot Password",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/password/forgot",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "password",
+                                "forgot"
+                            ]
+                        },
+                        "description": "Request password reset email"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Reset Password",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"token\": \"{{reset_token}}\",\n    \"new_password\": \"newpassword123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/password/reset",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "password",
+                                "reset"
+                            ]
+                        },
+                        "description": "Reset password with token"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Validate Reset Token",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/password/validate-token?token={{reset_token}}",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "password",
+                                "validate-token"
+                            ],
+                            "query": [
+                                {
+                                    "key": "token",
+                                    "value": "{{reset_token}}"
+                                }
+                            ]
+                        },
+                        "description": "Validate password reset token"
+                    },
+                    "response": []
+                }
+            ],
+            "description": "Password reset endpoints using email tokens"
+        },
+        {
+            "name": "🔐 OTP Password Reset",
+            "item": [
+                {
+                    "name": "Request OTP",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/password/otp/request",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "password",
+                                "otp",
+                                "request"
+                            ]
+                        },
+                        "description": "Request OTP for password reset"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Reset Password with OTP",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\",\n    \"otp_code\": \"123456\",\n    \"new_password\": \"newpassword123\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/password/otp/reset",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "password",
+                                "otp",
+                                "reset"
+                            ]
+                        },
+                        "description": "Reset password with OTP code"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Verify OTP",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"user@example.com\",\n    \"otp_code\": \"123456\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/password/otp/verify",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "password",
+                                "otp",
+                                "verify"
+                            ]
+                        },
+                        "description": "Verify OTP code only (without resetting password)"
+                    },
+                    "response": []
+                }
+            ],
+            "description": "OTP-based password reset endpoints"
+        },
+        {
+            "name": "🌐 Social Login",
+            "item": [
+                {
+                    "name": "Google Login (ID Token)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"provider\": \"google\",\n    \"idToken\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/social/login",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "social",
+                                "login"
+                            ]
+                        },
+                        "description": "Google login using ID token (recommended method). Google users automatically have email_verified: true"
+                    },
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "// Auto-save tokens after social login",
+                                    "if (pm.response.code === 200) {",
+                                    "    const responseJson = pm.response.json();",
+                                    "    ",
+                                    "    if (responseJson.success && responseJson.token) {",
+                                    "        // Save access token",
+                                    "        pm.environment.set('access_token', responseJson.token.accessToken);",
+                                    "        ",
+                                    "        // Save refresh token",
+                                    "        pm.environment.set('refresh_token', responseJson.token.refreshToken);",
+                                    "        ",
+                                    "        // Save user info",
+                                    "        if (responseJson.data) {",
+                                    "            pm.environment.set('user_id', responseJson.data.id);",
+                                    "            pm.environment.set('user_email', responseJson.data.email);",
+                                    "            pm.environment.set('username', responseJson.data.username);",
+                                    "        }",
+                                    "        ",
+                                    "        console.log('✅ Google login successful - Tokens saved to environment variables');",
+                                    "        console.log('Access Token:', responseJson.token.accessToken.substring(0, 20) + '...');",
+                                    "        console.log('User ID:', responseJson.data?.id);",
+                                    "    } else {",
+                                    "        console.log('❌ Google login failed or no token received');",
+                                    "    }",
+                                    "} else {",
+                                    "    console.log('❌ HTTP Error:', pm.response.code);",
+                                    "}"
+                                ]
+                            }
+                        }
+                    ],
+                    "response": []
+                },
+                {
+                    "name": "Google Login (Access Token)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"provider\": \"google\",\n    \"accessToken\": \"ya29.a0AfH6SMC...\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/social/login",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "social",
+                                "login"
+                            ]
+                        },
+                        "description": "Google login using access token. Google users automatically have email_verified: true"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Google Login (Fallback)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"provider\": \"google\",\n    \"email\": \"user@gmail.com\",\n    \"googleId\": \"1234567890\",\n    \"name\": \"John Doe\",\n    \"picture\": \"https://example.com/avatar.jpg\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/wp-json/okhub-jwt/v1/auth/social/login",
+                            "host": ["{{base_url}}"],
+                            "path": [
+                                "wp-json",
+                                "okhub-jwt",
+                                "v1",
+                                "auth",
+                                "social",
+                                "login"
+                            ]
+                        },
+                        "description": "Google login using fallback data (less secure, for development only). Google users automatically have email_verified: true"
+                    },
+                    "response": []
+                }
+            ],
+            "description": "Social login endpoints for Google authentication with automatic email verification"
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://yourdomain.com",
+            "type": "string",
+            "description": "Base URL of your WordPress site"
+        },
+        {
+            "key": "access_token",
+            "value": "",
+            "type": "string",
+            "description": "JWT access token (auto-filled after login)"
+        },
+        {
+            "key": "refresh_token",
+            "value": "",
+            "type": "string",
+            "description": "JWT refresh token (auto-filled after login)"
+        },
+        {
+            "key": "reset_token",
+            "value": "",
+            "type": "string",
+            "description": "Password reset token (from forgot password email)"
+        },
+        {
+            "key": "user_id",
+            "value": "",
+            "type": "string",
+            "description": "Current user ID (auto-filled after login)"
+        },
+        {
+            "key": "user_email",
+            "value": "",
+            "type": "string",
+            "description": "Current user email (auto-filled after login)"
+        },
+        {
+            "key": "username",
+            "value": "",
+            "type": "string",
+            "description": "Current username (auto-filled after login)"
+        }
+    ]
+}

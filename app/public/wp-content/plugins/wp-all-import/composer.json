@@ -1,0 +1,10 @@
+{
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
+    },
+    "require": {
+        "enshrined/svg-sanitize": "^0.21.0"
+    }
+}

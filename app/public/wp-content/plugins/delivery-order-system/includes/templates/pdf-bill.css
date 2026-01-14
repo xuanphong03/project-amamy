@@ -1,0 +1,308 @@
+/**
+ * PDF Bill CSS - mPDF Compatible
+ * Based on mPDF documentation: https://mpdf.github.io/
+ * 
+ * mPDF Supported CSS Properties (much better than TCPDF):
+ * - margin, padding
+ * - border, border-collapse
+ * - text-align, vertical-align
+ * - font-size, font-weight, font-family
+ * - color, background-color
+ * - width, height, min-width, min-height, max-width, max-height
+ * - line-height
+ * - display: block, table, inline, none, flex, grid (partial)
+ * - position: relative, absolute (limited)
+ * - float, clear
+ * - box-sizing
+ * - transform (limited)
+ * - box-shadow (limited)
+ * 
+ * Note: mPDF supports more CSS properties than TCPDF, but some advanced
+ * features may still have limitations. Test thoroughly.
+ */
+
+/* Base styles - TCPDF compatible only */
+body {
+    font-family: serif;
+    font-size: 9pt;
+    line-height: 1.3;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header section */
+.header {
+    padding-bottom: 2mm;
+}
+
+.header h1 {
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: #38b6ff;
+}
+
+/* Section container */
+.section {
+    margin-bottom: 3mm;
+    padding: 0;
+}
+
+/* Section title */
+.section-title {
+    font-size: 9pt;
+    font-weight: bold;
+    margin-bottom: 1mm;
+}
+
+/* Info rows */
+.info-row {
+    margin-bottom: 1.2mm;
+    font-size: 8pt;
+    line-height: 1.4;
+}
+
+.info-label {
+}
+
+/* Service table - TCPDF handles tables very well */
+.service-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 8pt;
+}
+
+.service-table thead {
+}
+
+.service-table th {
+    padding: 1.2mm 1.5mm;
+    border: 1px solid #000;
+    text-align: left;
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+.service-table td {
+    padding: 1mm 1.5mm;
+    border: 1px solid #000;
+    text-align: left;
+    font-size: 8pt;
+}
+
+.service-table td.col-weight,
+.service-table td.col-price {
+    text-align: right !important;
+    font-weight: bold !important;
+}
+
+.service-table td.col-stt {
+    width: 5%;
+    text-align: center;
+    font-weight: normal !important;
+}
+
+.service-table .col-detail {
+    width: 45%;
+}
+
+.service-table .col-weight {
+    width: 18%;
+    text-align: center;
+}
+
+.service-table .col-price {
+    width: 15%;
+    text-align: right;
+}
+
+.service-table .col-amount {
+    width: 17%;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Total row - light grey background */
+.total-row {
+    font-weight: bold;
+}
+
+.total-row td {
+    padding: 1.2mm 1.5mm;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.total-row td.total-label {
+    padding-right: 2mm;
+    text-align: center;
+}
+.service-table tbody tr.row-9 td {
+    font-weight: bold !important;
+}
+.service-table tbody tr.row-9 td {
+    color: #ff0000 !important;
+}
+.service-table tbody tr td.col-stt {
+    width: 5%;
+    text-align: center;
+    font-weight: normal !important;
+}
+/* Exchange rate row (row 11) */
+.exchange-rate-row td {
+    background-color: #fff;
+    padding: 1mm 1.5mm;
+}
+.total-row-price td {
+    color: #ff0000 !important;
+    font-weight: bold !important;
+}
+.exchange-rate-label {
+    text-align: center !important;
+    padding-right: 2mm;
+    background-color: #fff;
+}
+
+/* Terms section */
+.terms-section {
+    margin-top: 3mm;
+}
+.terms-section .section-title {
+    margin-bottom: 1mm;
+}
+
+.terms-item {
+    margin-bottom: 2mm;
+    font-size: 7pt;
+    line-height: 1.3;
+    text-align: justify;
+}
+
+.terms-number {
+    margin-right: 1.5mm;
+}
+.qr-section {
+    text-align: center;
+}
+.info-table {
+    width: 100%;
+}
+/* QR code section */
+/* .info-row.qr-section {
+    margin-top: 2mm;
+    margin-bottom: 2mm;
+} */
+
+.info-table-qr-cell-left {
+    width: 70%;
+    vertical-align: top;
+    text-align: left;
+}
+.info-table-qr-cell-right {
+    width: 30%;
+    vertical-align: top;
+    text-align: left;
+}
+.qr-container {
+    text-align: center;
+    width: 100%;
+}
+
+.qr-title {
+    font-weight: bold;
+    font-size: 8pt;
+    margin-bottom: 1mm;
+    text-align: center;
+}
+
+.qr-placeholder {
+    font-size: 6pt;
+    color: #666;
+    margin-top: 1mm;
+}
+.qr-info-table {
+    text-align: left;
+}
+.qr-info-row {
+    text-align: center;
+}
+/* Confirmation section - using table layout (TCPDF best practice) */
+.confirmation-section {
+    margin-top: 5mm;
+    padding: 0;
+}
+
+.confirmation-wrapper {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.confirmation-wrapper td {
+    vertical-align: top;
+    padding: 0 1.5mm;
+    width: 50%;
+}
+
+.confirmation-label {
+    font-weight: bold;
+    font-size: 8pt;
+    margin-bottom: 1mm;
+}
+
+.confirmation-box {
+    min-height: 22mm;
+    padding: 2mm;
+    margin-top: 1mm;
+    text-align: center;
+}
+
+.signature {
+    margin-top: 3mm;
+    width: 160px;
+    height: auto;
+}
+.confirmation-left,
+.confirmation-right {
+    text-align: center;
+}
+.confirmation-content {
+    text-align: center;
+    margin-top: 1.5mm;
+}
+
+.confirmation-company {
+    font-weight: bold;
+    font-size: 8pt;
+    margin-bottom: 1mm;
+}
+
+.confirmation-director {
+    margin-top: 3mm;
+    font-size: 8pt;
+}
+
+.confirmation-name {
+    margin-top: 2mm;
+    font-size: 8pt;
+}
+
+/* Utility classes - TCPDF compatible */
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-bold {
+    font-weight: bold;
+}
